@@ -15,7 +15,7 @@ source /etc/profile.d/vault.sh
 
 # Add Vault user
 sudo addgroup vault
-sudo adduser -G vault -S -s /bin/false -D vault
+sudo adduser --system --no-create-home --shell /bin/false --ingroup vault vault
 
 # Create Vault data
 sudo mkdir -p /etc/vault/{config,data}
